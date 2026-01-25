@@ -1,0 +1,4 @@
+# Local settings
+.claude/
+.DS_Store
+Thumbs.db
