@@ -155,12 +155,11 @@ img {
     background: linear-gradient(45deg, var(--accent-cyan) 0%, var(--accent-purple) 100%);
     min-height: 400px;
     padding-top: 100px;
-    display: flex;
-    align-items: flex-end;
 }
 
 .hero .container {
     padding-bottom: 60px;
+    padding-top: 40px;
 }
 
 .hero-headline {
@@ -172,6 +171,7 @@ img {
     max-width: 580px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    text-align: left;
 }
 
 /* Description Section */
