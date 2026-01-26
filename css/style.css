@@ -89,7 +89,7 @@ img {
 .nav-container {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -339,7 +339,7 @@ img {
 /* About Page */
 .about-hero {
     background: var(--gradient);
-    padding: 140px 24px 60px;
+    padding: 140px 100px 60px;
     text-align: center;
 }
 
@@ -409,7 +409,7 @@ img {
 /* Contact Page */
 .contact-hero {
     background: var(--gradient);
-    padding: 140px 24px 60px;
+    padding: 140px 100px 60px;
     text-align: center;
 }
 
@@ -489,7 +489,7 @@ img {
 /* Legal Pages */
 .legal-hero {
     background: var(--gradient);
-    padding: 140px 24px 50px;
+    padding: 140px 100px 50px;
     text-align: center;
 }
 
@@ -611,8 +611,16 @@ img {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-    .container {
+    .container,
+    .nav-container {
         padding: 0 60px;
+    }
+
+    .about-hero,
+    .contact-hero,
+    .legal-hero {
+        padding-left: 60px;
+        padding-right: 60px;
     }
 
     .hero-headline {
@@ -629,7 +637,8 @@ img {
 }
 
 @media (max-width: 768px) {
-    .container {
+    .container,
+    .nav-container {
         padding: 0 24px;
     }
 
@@ -709,7 +718,8 @@ img {
     }
 
     .about-hero,
-    .contact-hero {
+    .contact-hero,
+    .legal-hero {
         padding: 120px 24px 50px;
     }
 
@@ -734,6 +744,7 @@ img {
 }
 
 @media (max-width: 480px) {
+    .container,
     .nav-container {
         padding: 0 16px;
     }
