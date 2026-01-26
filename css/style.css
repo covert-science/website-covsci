@@ -153,13 +153,16 @@ img {
 /* Hero Section */
 .hero {
     background: linear-gradient(45deg, var(--accent-cyan) 0%, var(--accent-purple) 100%);
-    min-height: 400px;
-    padding-top: 100px;
+    min-height: 500px;
+    padding: 96px 100px 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .hero .container {
-    padding-bottom: 60px;
-    padding-top: 40px;
+    padding: 0;
+    max-width: none;
 }
 
 .hero-headline {
@@ -577,11 +580,9 @@ img {
         padding: 0 60px;
     }
 
-    .about-hero,
-    .contact-hero,
-    .legal-hero {
-        padding-left: 60px;
-        padding-right: 60px;
+    .hero {
+        padding: 80px 60px 48px;
+        min-height: 400px;
     }
 
     .hero-headline {
@@ -625,12 +626,8 @@ img {
     }
 
     .hero {
-        min-height: 260px;
-        padding-top: 80px;
-    }
-
-    .hero .container {
-        padding-bottom: 36px;
+        min-height: 280px;
+        padding: 80px 24px 36px;
     }
 
     .hero-headline {
@@ -721,11 +718,7 @@ img {
 
     .hero {
         min-height: 220px;
-        padding-top: 70px;
-    }
-
-    .hero .container {
-        padding-bottom: 30px;
+        padding: 70px 16px 30px;
     }
 
     .hero-headline {
