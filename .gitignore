@@ -2,3 +2,10 @@
 .claude/
 .DS_Store
 Thumbs.db
+
+# Dev files
+node_modules/
+package.json
+package-lock.json
+compare-screenshots.js
+screenshots/
