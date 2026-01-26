@@ -147,6 +147,14 @@ img {
     margin: 0 auto;
 }
 
+.hero-brand {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text-white);
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+}
+
 .hero h1 {
     font-size: 3rem;
     font-weight: 700;
@@ -290,6 +298,15 @@ img {
     color: rgba(255, 255, 255, 0.9);
     max-width: 600px;
     margin: 0 auto 32px;
+}
+
+.cta-text {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text-white);
+    max-width: 700px;
+    margin: 0 auto 32px;
+    line-height: 1.4;
 }
 
 /* About Page */
