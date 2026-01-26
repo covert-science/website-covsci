@@ -19,6 +19,7 @@
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-display: 'Staatliches', cursive;
     --max-width: 1200px;
+    --edge-padding: 100px;
 }
 
 html {
@@ -51,9 +52,7 @@ img {
 
 /* Container */
 .container {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 0 100px;
+    padding: 0 var(--edge-padding);
 }
 
 @media (max-width: 1024px) {
@@ -87,7 +86,7 @@ img {
 }
 
 .nav-container {
-    padding: 0 100px;
+    padding: 0 var(--edge-padding);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -152,7 +151,7 @@ img {
 .hero {
     background: linear-gradient(45deg, var(--accent-cyan) 0%, var(--accent-purple) 100%);
     min-height: 500px;
-    padding: 96px 100px 56px;
+    padding: 96px var(--edge-padding) 56px;
 }
 
 .hero-headline {
@@ -565,14 +564,14 @@ img {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-    .container,
-    .nav-container {
-        padding: 0 60px;
+    :root {
+        --edge-padding: 60px;
     }
 
     .hero {
-        padding: 80px 60px 48px;
         min-height: 400px;
+        padding-top: 80px;
+        padding-bottom: 48px;
     }
 
     .hero-headline {
@@ -589,9 +588,8 @@ img {
 }
 
 @media (max-width: 768px) {
-    .container,
-    .nav-container {
-        padding: 0 24px;
+    :root {
+        --edge-padding: 24px;
     }
 
     .nav-links {
@@ -617,7 +615,8 @@ img {
 
     .hero {
         min-height: 280px;
-        padding: 80px 24px 36px;
+        padding-top: 80px;
+        padding-bottom: 36px;
     }
 
     .hero-headline {
@@ -701,14 +700,14 @@ img {
 }
 
 @media (max-width: 480px) {
-    .container,
-    .nav-container {
-        padding: 0 16px;
+    :root {
+        --edge-padding: 16px;
     }
 
     .hero {
         min-height: 220px;
-        padding: 70px 16px 30px;
+        padding-top: 70px;
+        padding-bottom: 30px;
     }
 
     .hero-headline {
