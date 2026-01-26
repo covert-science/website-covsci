@@ -53,7 +53,19 @@ img {
 .container {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 100px;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 24px;
+    }
 }
 
 /* Navigation - Homepage */
@@ -142,15 +154,13 @@ img {
 .hero {
     background: linear-gradient(45deg, var(--accent-cyan) 0%, var(--accent-purple) 100%);
     min-height: 400px;
-    padding: 120px 24px 60px;
+    padding-top: 100px;
     display: flex;
     align-items: flex-end;
 }
 
-.hero-inner {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    width: 100%;
+.hero .container {
+    padding-bottom: 60px;
 }
 
 .hero-headline {
@@ -167,7 +177,7 @@ img {
 /* Description Section */
 .description-section {
     background: var(--bg-primary);
-    padding: 60px 24px 80px;
+    padding: 60px 0 80px;
 }
 
 .description-text {
@@ -214,7 +224,7 @@ img {
 
 /* Section Styling */
 .section {
-    padding: 80px 24px;
+    padding: 80px 0;
 }
 
 .section-dark {
@@ -255,8 +265,6 @@ img {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
-    max-width: var(--max-width);
-    margin: 0 auto;
 }
 
 .service-card {
@@ -269,17 +277,14 @@ img {
 
 .service-card-content {
     padding: 24px 24px 16px;
-    order: 1;
 }
 
 .service-card-image {
-    width: 100%;
+    width: calc(100% - 48px);
     height: 180px;
     object-fit: cover;
-    order: 2;
     border-radius: 8px;
     margin: 0 24px 24px;
-    width: calc(100% - 48px);
 }
 
 .service-card h3 {
@@ -301,11 +306,7 @@ img {
 /* CTA Section */
 .cta {
     background: var(--bg-primary);
-    padding: 80px 24px;
-}
-
-.cta .container {
-    max-width: 800px;
+    padding: 80px 0;
 }
 
 .cta-text {
@@ -317,6 +318,7 @@ img {
     line-height: 1.2;
     color: var(--accent-cyan);
     margin-bottom: 32px;
+    max-width: 600px;
 }
 
 .cta .btn {
@@ -532,26 +534,30 @@ img {
 
 /* Footer */
 .footer {
-    background: var(--bg-card);
-    padding: 40px 24px;
-    text-align: center;
+    background: var(--bg-primary);
+    padding: 40px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-content {
-    max-width: var(--max-width);
-    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 32px;
 }
 
 .footer-copyright {
     font-size: 0.9rem;
     color: var(--text-muted);
-    margin-bottom: 16px;
 }
 
 .footer-links {
     display: flex;
-    justify-content: center;
     gap: 24px;
 }
 
@@ -564,7 +570,20 @@ img {
 
 .footer-links a:hover {
     color: var(--text-white);
-    opacity: 1;
+}
+
+.footer-social {
+    display: flex;
+    gap: 16px;
+}
+
+.footer-social a {
+    color: var(--text-white);
+    transition: opacity 0.2s ease;
+}
+
+.footer-social a:hover {
+    opacity: 0.7;
 }
 
 /* Page Header (for inner pages) */
@@ -610,8 +629,12 @@ img {
     }
 
     .hero {
-        min-height: 300px;
-        padding: 100px 20px 40px;
+        min-height: 280px;
+        padding-top: 80px;
+    }
+
+    .hero .container {
+        padding-bottom: 40px;
     }
 
     .hero-headline {
@@ -619,11 +642,11 @@ img {
     }
 
     .description-section {
-        padding: 40px 20px 60px;
+        padding: 40px 0 60px;
     }
 
     .section {
-        padding: 60px 20px;
+        padding: 60px 0;
     }
 
     .services-heading {
@@ -655,9 +678,23 @@ img {
         font-size: 2rem;
     }
 
-    .footer-links {
+    .footer-content {
         flex-direction: column;
-        gap: 12px;
+        gap: 24px;
+        text-align: center;
+    }
+
+    .footer-left {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .footer-links {
+        justify-content: center;
+    }
+
+    .footer-social {
+        justify-content: center;
     }
 }
 
@@ -667,8 +704,12 @@ img {
     }
 
     .hero {
-        min-height: 250px;
-        padding: 90px 16px 30px;
+        min-height: 220px;
+        padding-top: 70px;
+    }
+
+    .hero .container {
+        padding-bottom: 30px;
     }
 
     .hero-headline {
