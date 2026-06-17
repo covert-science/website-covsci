@@ -373,6 +373,16 @@ img {
     margin: 0 auto;
 }
 
+.form-success {
+    margin: 0 0 24px;
+    padding: 14px 18px;
+    border-radius: 6px;
+    background: rgba(137, 210, 220, 0.12);
+    border: 1px solid var(--accent-cyan);
+    color: var(--text-white);
+    font-size: 0.95rem;
+}
+
 .form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;

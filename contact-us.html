@@ -35,7 +35,15 @@
             <h1 class="contact-title">Contact</h1>
 
             <div class="contact-form-container">
-                <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+                <p class="form-success" id="formSuccess" hidden>Thanks — your message has been sent. We'll be in touch shortly.</p>
+                <form action="https://formsubmit.co/info@covert.science" method="POST" class="contact-form">
+                    <!-- FormSubmit config -->
+                    <input type="hidden" name="_subject" value="New enquiry via covert.science">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://covert.science/contact-us.html?sent=1">
+                    <!-- honeypot: bots fill this, humans don't -->
+                    <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">Name</label>
@@ -65,7 +73,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-left">
-                    <p class="footer-copyright">&copy; 2025 Covert Science GmbH</p>
+                    <p class="footer-copyright">&copy; 2026 Covert Science GmbH</p>
                     <div class="footer-links">
                         <a href="impressum.html">Impressum</a>
                         <a href="datenschutz.html">Datenschutz</a>
@@ -86,6 +94,12 @@
         document.querySelector('.nav-toggle').addEventListener('click', function() {
             document.querySelector('.nav-links').classList.toggle('active');
         });
+
+        // Show success message after a FormSubmit redirect (?sent=1)
+        if (new URLSearchParams(window.location.search).has('sent')) {
+            var s = document.getElementById('formSuccess');
+            if (s) { s.hidden = false; s.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+        }
     </script>
 </body>
 </html>
