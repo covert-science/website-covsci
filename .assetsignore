@@ -1,0 +1,16 @@
+# Not part of the published site (Workers static assets honours this file).
+.git
+.gitignore
+.lfsconfig
+.assetsignore
+.claude
+wrangler.jsonc
+DEPLOY.md
+README.md
+screenshot.js
+visual-diff.py
+compare-screenshots.js
+package.json
+package-lock.json
+node_modules
+screenshots

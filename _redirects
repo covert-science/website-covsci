@@ -1,0 +1,4 @@
+# covert.science is canonical; the aliases 301 to it, as the Hetzner Caddy did.
+https://www.covert.science/* https://covert.science/:splat 301
+https://covert-science.com/* https://covert.science/:splat 301
+https://www.covert-science.com/* https://covert.science/:splat 301

@@ -1,0 +1,20 @@
+// Cloudflare Workers static-assets deployment of the company website.
+// Deploy from a checkout: `npx wrangler login && npx wrangler deploy`.
+// See DEPLOY.md. Custom domains create their DNS records in the covert.science
+// account; remove the Hetzner A records for these names first.
+{
+  "$schema": "https://unpkg.com/wrangler/config-schema.json",
+  "name": "website-covsci",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "none"
+  },
+  "routes": [
+    { "pattern": "covert.science", "custom_domain": true },
+    { "pattern": "www.covert.science", "custom_domain": true },
+    { "pattern": "covert-science.com", "custom_domain": true },
+    { "pattern": "www.covert-science.com", "custom_domain": true }
+  ]
+}
